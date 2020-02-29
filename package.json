@@ -1,0 +1,17 @@
+{
+    "name": "uj-progresstracker",
+    "version": "1.0.0",
+    "description": "Personal UJ progress tracker",
+    "main": "main.js",
+    "scripts": {
+      "start": "electron ."
+    },
+    "repository": "",
+    "keywords": [
+      "Electron"
+    ],
+    "author": "holosiek",
+    "devDependencies": {
+      "electron": "^8.0.2"
+    }
+  }
