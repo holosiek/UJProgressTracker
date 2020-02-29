@@ -1,0 +1,28 @@
+/* Load fonts */
+@font-face { font-family: Ubuntu; src: url('Ubuntu-Regular.ttf'); }
+
+/* General styling */
+body { font-family: Ubuntu; }
+
+/* Content styling */
+.content { position: fixed; top: 0; left: 64px; width: calc(100vw - 64px); height: 100vh; background: #222; box-sizing: border-box; padding: 20px; }
+
+/* Menu styling */
+.menu { position: fixed; top: 0; left: 0; width: 64px; height: 100vh; background: #111; box-sizing: border-box; transition: width 0.5s; z-index: 1; overflow: hidden; }
+.menu-separator       { height: 0px; border-bottom: 1px solid #404040; margin: 10px; position: relative; transition: border-bottom-color 0.5s }
+.menu-separator-label { position: absolute; top: -7px; right: -250px; width: 240px; color: white; text-align: right; font-size: 14px; transition: right 0.5s; white-space: nowrap; text-shadow: 0 0 5px #383838; }
+.menu-button          { position: relative; height: 32px; user-select: none; cursor: pointer; border-right: 4px solid #404040; box-sizing: border-box; transition: border-color 0.2s, width 0.5s; }
+.menu-button-label    { position: absolute; color: #404040; line-height: 32px; top: 0; right: -250px; width: 240px; text-align: right; font-size: 14px; transition: right 0.5s, color 0.2s; white-space: nowrap;  }
+.menu-button-icon     { line-height: 32px; color: #404040; text-align: center; font-size: 16px; transition: color 0.2s; position: absolute; top: 0; left: 0; width: 60px; }
+.menu-button-active   { border-right: 4px solid #4fc2ef !important; }
+.menu-button-active .menu-button-icon  { color: #4fc2ef !important; }
+.menu-button-active .menu-button-label { color: #4fc2ef !important; }
+
+/* Menu hovers */
+.menu:hover                       { width: 240px; }
+.menu:hover .menu-separator       { border-bottom-color: #272727; }
+.menu:hover .menu-separator-label { right: 0px; }
+.menu:hover .menu-button-label    { right: 10px; }
+.menu-button:hover                    { border-color: #777; }
+.menu-button:hover .menu-button-icon  { color: #777; }
+.menu-button:hover .menu-button-label { color: #777; }
