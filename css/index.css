@@ -9,8 +9,8 @@ body { font-family: Ubuntu; }
 }
 
 /* Content styling */
-.content          { position: fixed; top: 0; left: 64px; width: calc(100vw - 64px); height: 100vh; background: #080808; box-sizing: border-box; padding: 20px; overflow-y: scroll; }
-.content-blackout { background-color: rgba(0, 0, 0, 0); transition: background-color 0.5s; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1; }
+.content          { position: fixed; top: 0; left: 64px; width: calc(100vw - 64px); height: 100vh; background: #080808; box-sizing: border-box; padding: 20px; overflow-y: auto; }
+.content-blackout { background-color: rgba(0, 0, 0, 0); transition: background-color 0.5s; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; }
 .content-wrap     { position: relative; max-width: 1600px; margin: 0 auto; padding: 0 50px; }
 .content-title    { position: relative; font-size: 48px; color: var(--accent-color); padding: 0 0 0 20px; margin: 10px 0 30px 10px; border-left: 4px solid var(--accent-color); }
 .content-title i  { margin: 0 10px; }
@@ -31,7 +31,7 @@ body { font-family: Ubuntu; }
 .menu:hover .menu-separator       { border-bottom-color: #272727; }
 .menu:hover .menu-separator-label { right: 0px; }
 .menu:hover .menu-button-label    { right: 10px; }
-.menu:hover + .content-blackout     { background-color: rgba(0, 0, 0, 0.8); }
+.menu:hover + .content-blackout     { background-color: rgba(0, 0, 0, 0.8); z-index: 1; }
 .menu-button:hover                    { border-color: #777; }
 .menu-button:hover .menu-button-icon  { color: #777; }
 .menu-button:hover .menu-button-label { color: #777; }
