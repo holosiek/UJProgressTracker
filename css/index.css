@@ -4,25 +4,42 @@
 /* General styling */
 body { font-family: Ubuntu; }
 
+:root {
+    --accent-color: #4fc2ef;
+}
+
 /* Content styling */
-.content { position: fixed; top: 0; left: 64px; width: calc(100vw - 64px); height: 100vh; background: #222; box-sizing: border-box; padding: 20px; }
+.content          { position: fixed; top: 0; left: 64px; width: calc(100vw - 64px); height: 100vh; background: #080808; box-sizing: border-box; padding: 20px; overflow-y: scroll; }
+.content-blackout { background-color: rgba(0, 0, 0, 0); transition: background-color 0.5s; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 1; }
+.content-wrap     { position: relative; max-width: 1600px; margin: 0 auto; padding: 0 50px; }
+.content-title    { position: relative; font-size: 48px; color: var(--accent-color); padding: 0 0 0 20px; margin: 10px 0 30px 10px; border-left: 4px solid var(--accent-color); }
+.content-title i  { margin: 0 10px; }
 
 /* Menu styling */
-.menu { position: fixed; top: 0; left: 0; width: 64px; height: 100vh; background: #111; box-sizing: border-box; transition: width 0.5s; z-index: 1; overflow: hidden; }
+.menu                 { position: fixed; top: 0; left: 0; width: 64px; height: 100vh; background: #111; box-sizing: border-box; transition: width 0.5s; z-index: 10; overflow: hidden; }
 .menu-separator       { height: 0px; border-bottom: 1px solid #404040; margin: 10px; position: relative; transition: border-bottom-color 0.5s }
 .menu-separator-label { position: absolute; top: -7px; right: -250px; width: 240px; color: white; text-align: right; font-size: 14px; transition: right 0.5s; white-space: nowrap; text-shadow: 0 0 5px #383838; }
 .menu-button          { position: relative; height: 32px; user-select: none; cursor: pointer; border-right: 4px solid #404040; box-sizing: border-box; transition: border-color 0.2s, width 0.5s; }
 .menu-button-label    { position: absolute; color: #404040; line-height: 32px; top: 0; right: -250px; width: 240px; text-align: right; font-size: 14px; transition: right 0.5s, color 0.2s; white-space: nowrap;  }
 .menu-button-icon     { line-height: 32px; color: #404040; text-align: center; font-size: 16px; transition: color 0.2s; position: absolute; top: 0; left: 0; width: 60px; }
-.menu-button-active   { border-right: 4px solid #4fc2ef !important; }
-.menu-button-active .menu-button-icon  { color: #4fc2ef !important; }
-.menu-button-active .menu-button-label { color: #4fc2ef !important; }
+.menu-button-active   { border-right: 4px solid var(--accent-color) !important; }
+.menu-button-active .menu-button-icon  { color: var(--accent-color) !important; }
+.menu-button-active .menu-button-label { color: var(--accent-color) !important; }
 
 /* Menu hovers */
 .menu:hover                       { width: 240px; }
 .menu:hover .menu-separator       { border-bottom-color: #272727; }
 .menu:hover .menu-separator-label { right: 0px; }
 .menu:hover .menu-button-label    { right: 10px; }
+.menu:hover + .content-blackout     { background-color: rgba(0, 0, 0, 0.8); }
 .menu-button:hover                    { border-color: #777; }
 .menu-button:hover .menu-button-icon  { color: #777; }
 .menu-button:hover .menu-button-label { color: #777; }
+
+/* Calendar styling */
+.calendar              { position: relative; display: flex; max-width: 1600px; margin: 0 auto; }
+.calendar-column       { box-sizing: border-box; width: 20%; margin: 10px 0; }
+.calendar-time         { position: relative; height: 75px; border: 1px solid #131313; box-sizing: border-box; }
+.calendar-time-column  { width: 50px; text-align: center; margin-right: 10px; }
+.calendar-time-label   { position: relative; height: 75px; color: #9dddf6; font-size: 18px }
+.calendar-header       { position: relative; height: 20px; line-height: 20px; font-size: 18px; color: #9dddf6; text-align: center; margin: 0 0 10px 0; }
