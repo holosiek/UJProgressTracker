@@ -39,7 +39,7 @@ body { font-family: Ubuntu; }
 /* Calendar styling */
 .calendar              { position: relative; display: flex; max-width: 1600px; margin: 0 auto; }
 .calendar-column       { box-sizing: border-box; width: 20%; margin: 10px 0; }
-.calendar-time         { position: relative; height: 75px; border: 1px solid #131313; box-sizing: border-box; }
+.calendar-box          { position: relative; height: 75px; border: 1px solid #131313; box-sizing: border-box; }
 .calendar-time-column  { width: 50px; text-align: center; margin-right: 10px; }
 .calendar-time-label   { position: relative; height: 75px; color: #9dddf6; font-size: 18px }
 .calendar-header       { position: relative; height: 20px; line-height: 20px; font-size: 18px; color: #9dddf6; text-align: center; margin: 0 0 10px 0; }
