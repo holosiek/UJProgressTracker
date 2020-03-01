@@ -43,3 +43,10 @@ body { font-family: Ubuntu; }
 .calendar-time-column  { width: 50px; text-align: center; margin-right: 10px; }
 .calendar-time-label   { position: relative; height: 75px; color: #9dddf6; font-size: 18px }
 .calendar-header       { position: relative; height: 20px; line-height: 20px; font-size: 18px; color: #9dddf6; text-align: center; margin: 0 0 10px 0; }
+
+
+/* Scrollbar styling */
+::-webkit-scrollbar       { width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #333333; }
+::-webkit-scrollbar-thumb:hover { background: #393939; } 
